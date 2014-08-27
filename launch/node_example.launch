@@ -1,0 +1,11 @@
+<!-- Starts up everything needed to run the kisbot publisher -->
+<launch>
+
+  <!-- kisbot publisher node -->
+  <node
+    pkg="kisbot" type="readscan.py" name="readscan">
+    <param name="rate" value="10"/>
+  </node>
+
+  <include file="$(find kisbot)/launch/tools.launch"/>
+</launch>
